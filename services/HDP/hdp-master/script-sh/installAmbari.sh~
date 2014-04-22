@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#add Ambari repo
+sudo wget http://public-repo-1.hortonworks.com/ambari/centos5/1.x/updates/1.4.2.104/ambari.repo
+cp ambari.repo /etc/yum.repos.d
+
+#install Ambari
+sudo yum -y install ambari-server
+echo -e 'y\nn\nn\n' | sudo ambari-server setup -j /usr/lib/java-1.7.0-openjdk
+ambari-server start

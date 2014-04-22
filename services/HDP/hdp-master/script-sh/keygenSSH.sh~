@@ -1,0 +1,4 @@
+#! /bin/bash
+
+chmod 600 /home/user/gs-files
+cp /home/user/gs-files/cloudify_key.pem ~/.ssh/id_rsa
